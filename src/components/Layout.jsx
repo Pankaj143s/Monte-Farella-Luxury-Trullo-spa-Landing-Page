@@ -7,6 +7,8 @@ import Gallery from "../pages/Gallery";
 import BookingForm from "../components/BookingForm";
 import Contact from "../pages/Contact";
 import Footer from "../pages/Footer";
+import LocationSection from "../pages/LocationSection";
+import SocialMediaSection from "../pages/SocialMediaSection";
 
 const Layout = () => {
   return (
@@ -15,14 +17,14 @@ const Layout = () => {
       <div id="home">
         <Home />
       </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="services">
-        <Services />
-      </div>
       <div id="gallery">
         <Gallery />
+      </div>
+      <div id="location">
+        <LocationSection />
+      </div>
+      <div id="social-media">
+        <SocialMediaSection />
       </div>
       <div id="booking">
         <BookingForm />
@@ -30,6 +32,13 @@ const Layout = () => {
       <div id="contact">
         <Contact />
       </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+
       <Footer />
     </div>
   );
