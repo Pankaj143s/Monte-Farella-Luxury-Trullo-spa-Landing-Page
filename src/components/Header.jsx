@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 md:top-5 left-0 w-full z-50 bg-opacity-70">
+    <header className="absolute top-0 left-0 w-full z-50  bg-opacity-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div>
@@ -29,60 +29,27 @@ const Header = () => {
           aria-label="Primary Navigation"
           className="hidden lg:flex space-x-8 items-center"
         >
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            About
-          </Link>
-          <Link
-            to="services"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            Services
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            Gallery
-          </Link>
-          <Link
-            to="booking"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            Booking
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            spy={true}
-            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-          >
-            Contact
-          </Link>
+          {[
+            { to: "home", label: "Home" },
+            { to: "location", label: "Location" },
+            { to: "gallery", label: "Gallery" },
+            { to: "testimonials", label: "Testimonials" },
+            { to: "faq", label: "FAQs" },
+            { to: "booking", label: "Booking" },
+            { to: "contact", label: "Contact" },
+          ].map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="text-headingColor font-bold"
+              className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -120,60 +87,28 @@ const Header = () => {
         }`}
         aria-label="Mobile Navigation"
       >
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          Home
-        </Link>
-        <Link
-          to="about"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          About
-        </Link>
-        <Link
-          to="services"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          Services
-        </Link>
-        <Link
-          to="gallery"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          Gallery
-        </Link>
-        <Link
-          to="booking"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          Booking
-        </Link>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={500}
-          onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
-        >
-          Contact
-        </Link>
+        {[
+          { to: "home", label: "Home" },
+          { to: "location", label: "Location" },
+          { to: "gallery", label: "Gallery" },
+          { to: "testimonials", label: "Testimonials" },
+          { to: "faq", label: "FAQs" },
+          { to: "booking", label: "Booking" },
+          { to: "contact", label: "Contact" },
+        ].map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-headingColor font-bold"
+            onClick={handleMenuClick}
+            className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
     </header>
   );
