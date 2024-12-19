@@ -17,12 +17,6 @@ const Layout = () => {
       <div id="home">
         <Home />
       </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="services">
-        <Services />
-      </div>
       <div id="gallery">
         <Gallery />
       </div>
@@ -38,6 +32,13 @@ const Layout = () => {
       <div id="contact">
         <Contact />
       </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+
       <Footer />
     </div>
   );
