@@ -1,9 +1,10 @@
 import React from "react";
+import BookingForm from "../components/BookingForm";
 
 const Booking = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-500">
-      <h1 className="text-4xl font-bold text-white">Booking Page</h1>
+    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
+      <BookingForm />
     </div>
   );
 };

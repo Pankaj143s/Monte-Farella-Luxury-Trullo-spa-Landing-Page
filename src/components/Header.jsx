@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import Logo from "../assets/images/logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setIsMobileMenuOpen(false); // Close menu on selection
+    setIsMobileMenuOpen(false); // Close mobile menu on selection
   };
 
   return (
@@ -14,14 +14,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div>
-          <NavLink to="/" onClick={handleMenuClick}>
+          <Link to="home" smooth={true} duration={500}>
             <img
               src={Logo}
-              alt="Imperial Grand Hotel Logo"
+              alt="Monte Farella Logo"
               className="h-10 md:h-12"
               loading="lazy"
             />
-          </NavLink>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -29,105 +29,60 @@ const Header = () => {
           aria-label="Primary Navigation"
           className="hidden lg:flex space-x-8 items-center"
         >
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "text-yellow-400 text-base md:text-lg uppercase relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                : "text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase"
-            }
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
           >
             Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "text-yellow-400 text-base md:text-lg uppercase relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                : "text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase"
-            }
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
           >
             About
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive
-                ? "text-yellow-400 text-base md:text-lg uppercase relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                : "text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase"
-            }
+          </Link>
+          <Link
+            to="services"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
           >
             Services
-          </NavLink>
-
-          {/* Rooms & Suites Dropdown */}
-          <div className="relative group">
-            <button className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase">
-              Rooms & Suites <span className="ml-1">▼</span>
-            </button>
-            <div className="absolute left-0 top-full w-40 bg-gray-900 text-sm shadow-md py-2 hidden group-hover:block">
-              <NavLink
-                to="/rooms"
-                className={({ isActive }) =>
-                  isActive
-                    ? "block px-4 py-2 text-yellow-400 relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                    : "block px-4 py-2 text-white hover:bg-yellow-400 opacity-70"
-                }
-              >
-                Rooms
-              </NavLink>
-              <NavLink
-                to="/suites"
-                className={({ isActive }) =>
-                  isActive
-                    ? "block px-4 py-2 text-yellow-400 relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                    : "block px-4 py-2 text-white hover:bg-yellow-400 opacity-70"
-                }
-              >
-                Suites
-              </NavLink>
-            </div>
-          </div>
-
-          {/* Pages Dropdown */}
-          <div className="relative group">
-            <button className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase">
-              Pages <span className="ml-1">▼</span>
-            </button>
-            <div className="absolute left-0 top-full w-40 bg-gray-900 text-sm shadow-md py-2 hidden group-hover:block">
-              <NavLink
-                to="/page1"
-                className={({ isActive }) =>
-                  isActive
-                    ? "block px-4 py-2 text-yellow-400 relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                    : "block px-4 py-2 text-white hover:bg-yellow-400 opacity-70"
-                }
-              >
-                Page 1
-              </NavLink>
-              <NavLink
-                to="/page2"
-                className={({ isActive }) =>
-                  isActive
-                    ? "block px-4 py-2 text-yellow-400 relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                    : "block px-4 py-2 text-white hover:bg-yellow-400 opacity-70"
-                }
-              >
-                Page 2
-              </NavLink>
-            </div>
-          </div>
-
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "text-yellow-400 text-base md:text-lg uppercase relative opacity-70 after:content-[''] after:w-2 after:h-2 after:bg-yellow-400 after:rounded-full after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2"
-                : "text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase"
-            }
+          </Link>
+          <Link
+            to="gallery"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
           >
-            Contact Us
-          </NavLink>
+            Gallery
+          </Link>
+          <Link
+            to="booking"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+          >
+            Booking
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            className="text-white text-base md:text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -165,74 +120,60 @@ const Header = () => {
         }`}
         aria-label="Mobile Navigation"
       >
-        <NavLink
-          to="/"
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
           onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase"
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
         >
           Home
-        </NavLink>
-        <NavLink
-          to="/about"
+        </Link>
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
           onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase"
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
         >
           About
-        </NavLink>
-        <NavLink
-          to="/services"
+        </Link>
+        <Link
+          to="services"
+          smooth={true}
+          duration={500}
           onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase"
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
         >
           Services
-        </NavLink>
-        <div className="py-2">
-          <p className="block text-lg text-white opacity-70 uppercase">
-            Rooms & Suites
-          </p>
-          <div className="pl-4 space-y-2">
-            <NavLink
-              to="/rooms"
-              onClick={handleMenuClick}
-              className="block text-lg hover:text-yellow-400 opacity-70 uppercase"
-            >
-              Rooms
-            </NavLink>
-            <NavLink
-              to="/suites"
-              onClick={handleMenuClick}
-              className="block text-lg hover:text-yellow-400 opacity-70 uppercase"
-            >
-              Suites
-            </NavLink>
-          </div>
-        </div>
-        <div className="py-2">
-          <p className="block text-lg text-white opacity-70 uppercase">Pages</p>
-          <div className="pl-4 space-y-2">
-            <NavLink
-              to="/page1"
-              onClick={handleMenuClick}
-              className="block text-lg hover:text-yellow-400 opacity-70 uppercase"
-            >
-              Page 1
-            </NavLink>
-            <NavLink
-              to="/page2"
-              onClick={handleMenuClick}
-              className="block text-lg hover:text-yellow-400 opacity-70 uppercase"
-            >
-              Page 2
-            </NavLink>
-          </div>
-        </div>
-        <NavLink
-          to="/contact"
+        </Link>
+        <Link
+          to="gallery"
+          smooth={true}
+          duration={500}
           onClick={handleMenuClick}
-          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase"
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
         >
-          Contact Us
-        </NavLink>
+          Gallery
+        </Link>
+        <Link
+          to="booking"
+          smooth={true}
+          duration={500}
+          onClick={handleMenuClick}
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+        >
+          Booking
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          onClick={handleMenuClick}
+          className="block py-2 text-lg hover:text-yellow-400 opacity-70 uppercase cursor-pointer"
+        >
+          Contact
+        </Link>
       </nav>
     </header>
   );
