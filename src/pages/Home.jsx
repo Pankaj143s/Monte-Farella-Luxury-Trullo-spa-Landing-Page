@@ -144,7 +144,7 @@ const Home = () => {
           </div>
           <Link
             to="/booking"
-            className="bg-yellow-400 text-black px-4 py-2 rounded-lg uppercase font-bold hover:bg-yellow-500 transition"
+            className="bg-yellow-400 font-poppins sm:text-xs md:text-xl w-fit text-black px-4 py-2 rounded-lg uppercase  hover:bg-yellow-500 transition"
           >
             Book Your Experience Now
           </Link>
