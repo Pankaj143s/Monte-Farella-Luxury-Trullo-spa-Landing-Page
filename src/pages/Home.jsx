@@ -5,6 +5,7 @@ import BannerMobile from "../assets/images/banner-mobile.png";
 import Customer1 from "../assets/images/c1.png";
 import Customer2 from "../assets/images/c2.png";
 import Customer3 from "../assets/images/c3.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [bannerImage, setBannerImage] = useState(BannerDesktop);
@@ -141,6 +142,12 @@ const Home = () => {
               </svg>
             </button>
           </div>
+          <Link
+            to="/booking"
+            className="bg-yellow-400 text-black px-4 py-2 rounded-lg uppercase font-bold hover:bg-yellow-500 transition"
+          >
+            Book Your Experience Now
+          </Link>
         </div>
       </div>
     </div>

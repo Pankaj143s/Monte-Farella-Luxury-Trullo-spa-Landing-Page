@@ -1,17 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import routes from "./routes";
+import { BrowserRouter as Router } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
-      </Routes>
+      {/* Wrapping the Layout in Router */}
+      <Layout />
     </Router>
   );
 }
