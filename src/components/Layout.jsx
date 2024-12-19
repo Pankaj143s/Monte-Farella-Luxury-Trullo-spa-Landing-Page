@@ -1,44 +1,59 @@
 import React from "react";
-import Header from "./Header";
 import Home from "../pages/Home";
-import About from "../pages/About";
-import Services from "../pages/Services";
+import Header from "./Header";
+import LocationSection from "../pages/LocationSection";
 import Gallery from "../pages/Gallery";
-import BookingForm from "../components/BookingForm";
+import Testimonials from "../pages/Testimonials";
+import FAQSection from "../pages/FAQSection";
+import Booking from "../pages/Booking";
 import Contact from "../pages/Contact";
 import Footer from "../pages/Footer";
-import LocationSection from "../pages/LocationSection";
-import SocialMediaSection from "../pages/SocialMediaSection";
+import ScrollProgress from "../pages/ScrollProgress"; // Optional for scroll indicator
 
 const Layout = () => {
   return (
     <div>
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+
       <Header />
+
+      {/* Home Section */}
       <div id="home">
         <Home />
       </div>
-      <div id="gallery">
-        <Gallery />
-      </div>
+
+      {/* Location Section */}
       <div id="location">
         <LocationSection />
       </div>
-      <div id="social-media">
-        <SocialMediaSection />
+
+      {/* Image Gallery Section */}
+      <div id="gallery">
+        <Gallery />
       </div>
+
+      {/* Testimonials Section */}
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+
+      {/* FAQ Section */}
+      <div id="faq">
+        <FAQSection />
+      </div>
+
+      {/* Booking Section */}
       <div id="booking">
-        <BookingForm />
+        <Booking />
       </div>
+
+      {/* Contact Section */}
       <div id="contact">
         <Contact />
       </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="services">
-        <Services />
-      </div>
 
+      {/* Footer */}
       <Footer />
     </div>
   );

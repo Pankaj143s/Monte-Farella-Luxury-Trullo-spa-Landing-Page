@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -8,15 +7,17 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        "headingColor": "#bd9769", // Custom color for headings
+      },
       letterSpacing: {
-        extra: '0.25em', // Add more letter spacing
+        extra: "0.25em", // Add more letter spacing
       },
       fontFamily: {
-        forum: ['Forum', 'serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        forum: ["Forum", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
-
+};

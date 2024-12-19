@@ -64,10 +64,10 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="bg-gray-900 text-white py-12 px-6 lg:px-20"
+      className="bg-[#2c2c2c] text-white py-12 px-6 lg:px-20"
     >
       <div className="text-center max-w-4xl mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-semibold text-yellow-400 mb-4">
+        <h2 className="text-3xl lg:text-4xl font-semibold text-headingColor mb-4">
           Image Gallery
         </h2>
         <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
