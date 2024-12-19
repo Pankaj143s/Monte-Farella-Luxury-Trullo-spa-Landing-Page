@@ -7,6 +7,8 @@ import Gallery from "../pages/Gallery";
 import BookingForm from "../components/BookingForm";
 import Contact from "../pages/Contact";
 import Footer from "../pages/Footer";
+import LocationSection from "../pages/LocationSection";
+import SocialMediaSection from "../pages/SocialMediaSection";
 
 const Layout = () => {
   return (
@@ -23,6 +25,12 @@ const Layout = () => {
       </div>
       <div id="gallery">
         <Gallery />
+      </div>
+      <div id="location">
+        <LocationSection />
+      </div>
+      <div id="social-media">
+        <SocialMediaSection />
       </div>
       <div id="booking">
         <BookingForm />

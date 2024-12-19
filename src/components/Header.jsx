@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo1.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Header = () => {
             <img
               src={Logo}
               alt="Monte Farella Logo"
-              className="h-10 md:h-12"
+              className="h-10 md:h-16"
               loading="lazy"
             />
           </Link>
