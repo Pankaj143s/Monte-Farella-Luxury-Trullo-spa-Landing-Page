@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import Footer from "../pages/Footer";
 import LocationSection from "../pages/LocationSection";
 import SocialMediaSection from "../pages/SocialMediaSection";
+import Testimonials from "../pages/Testimonials";
 
 const Layout = () => {
   return (
@@ -26,6 +27,9 @@ const Layout = () => {
       <div id="social-media">
         <SocialMediaSection />
       </div>
+      <div id="testimonials">
+        <Testimonials />
+      </div>
       <div id="booking">
         <BookingForm />
       </div>
@@ -38,7 +42,6 @@ const Layout = () => {
       <div id="services">
         <Services />
       </div>
-
       <Footer />
     </div>
   );
