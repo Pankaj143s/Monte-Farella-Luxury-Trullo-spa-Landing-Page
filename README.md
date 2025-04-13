@@ -1,8 +1,61 @@
-# React + Vite
+# 🏡 Monte Farella Luxury Trullo & Spa – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and elegant landing page built for **Monte Farella Luxury Trullo & Spa**, showcasing premium hospitality in the heart of Italy.
 
-Currently, two official plugins are available:
+> 🚀 **Live Preview**: [https://monte-farella-luxury-trullo-spa-landing-page.vercel.app](https://monte-farella-luxury-trullo-spa-landing-page.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## ✨ Features
+
+- Smooth scroll with progress indicator
+- Fully responsive layout (mobile, tablet, desktop)
+- Clean and minimal design
+- Testimonial section
+- Vercel-friendly routing for SEO
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend Framework**: [React](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+
+To Run This Project Locally 
+# Clone the repository
+git clone https://github.com/Pankaj143s/Monte-Farella-Luxury-Trullo-spa-Landing-Page.git
+
+# Navigate into the project folder
+cd Monte-Farella-Luxury-Trullo-spa-Landing-Page
+
+# Install dependencies
+npm install
+
+
+
+
+
+## 📂 Folder Structure
+
+```bash
+.
+├── public/             # Static assets
+├── src/                # Source files
+│   ├── components/     # Reusable components
+│   └── pages/          # Page components
+├── tailwind.config.js  # Tailwind CSS config
+├── vercel.json         # Vercel routing config
+├── package.json        # Project metadata and dependencies
+└── README.md
+
+
+
+
+
+# Start development server
+npm run dev
